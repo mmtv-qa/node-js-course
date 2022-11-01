@@ -1,0 +1,22 @@
+{
+  "name": "node_js_course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmtv-qa/node-js-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmtv-qa/node-js-course/issues"
+  },
+  "homepage": "https://github.com/mmtv-qa/node-js-course#readme",
+  "dependencies": {
+    "jest": "^29.2.2"
+  }
+}
