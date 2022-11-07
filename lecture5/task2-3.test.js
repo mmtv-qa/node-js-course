@@ -1,4 +1,5 @@
-Circle = require('./task2.js');
+Circle = require('./task2-3.js');
+
 
 describe('Circle', () => {
     const test_circle = new Circle(50, 30, 10);
@@ -19,5 +20,17 @@ describe('Circle', () => {
 
     test('getIntersectionArea', () => {
         expect(test_circle.getIntersectionArea(new Circle(50, 30, 10))).toBeCloseTo(314.1592653589793);
+    })
+})
+
+
+describe('Circle task 3', () => {
+    let test_circle = new Circle(50, 30, 10);
+    test('coordinateInCircle', () => {
+        expect(test_circle.coordinateInCircle(50, 30)).toBe(true);
+    })
+
+    test('coordinateInCircle', () => {
+        expect(test_circle.coordinateInCircle(50, 40)).toBe(false);
     })
 })

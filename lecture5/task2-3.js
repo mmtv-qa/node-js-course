@@ -20,6 +20,9 @@ function Circle(x, y, r) {
             return a * this.r ** 2 + b * circle.r ** 2 - d * this.r * Math.sin(a);
         }
     }
+    this.coordinateInCircle = (x, y) => {
+        return (x - this.x) ** 2 + (y - this.y) ** 2 <= this.r ** 2;
+    }
 }
 
 
