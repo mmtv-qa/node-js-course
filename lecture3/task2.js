@@ -35,4 +35,38 @@ function charToArabic(char) {
     }
 }
 
-module.exports = {romanToArabic, charToArabic};
+
+
+
+function arabicToRoman(arabic) {
+    if (typeof arabic !== 'number') {
+        throw new Error(`Should be a number`);
+    }
+    let romans = {
+        'M':1000,
+        'CM': 900,
+        'D': 500,
+        'CD': 400,
+        'C': 100,
+        'XC': 90,
+        'L': 50,
+        'XL': 40,
+        'X': 10,
+        'IX': 9,
+        'V': 5,
+        'IV': 4,
+        'I': 1
+    }
+    let i;
+    let result = '';
+    for ( i in romans ) {
+        while (arabic >= romans[i]) {
+            result += i;
+            arabic -= romans[i]
+        }
+    }
+    return result
+
+}
+
+module.exports = {romanToArabic, arabicToRoman};
