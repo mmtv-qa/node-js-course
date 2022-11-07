@@ -26,11 +26,11 @@ describe('Circle', () => {
 
 describe('Circle task 3', () => {
     let test_circle = new Circle(50, 30, 10);
-    test('coordinateInCircle', () => {
+    test('positive test', () => {
         expect(test_circle.coordinateInCircle(50, 30)).toBe(true);
     })
 
-    test('coordinateInCircle', () => {
-        expect(test_circle.coordinateInCircle(50, 40)).toBe(false);
+    test('negative test', () => {
+        expect(test_circle.coordinateInCircle(60, 40)).toBe(false);
     })
 })
