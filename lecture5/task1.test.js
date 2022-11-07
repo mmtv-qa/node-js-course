@@ -1,5 +1,4 @@
 const {objectIsEmpty, equalObjects, objectsSubset, getByKey} = require('./task1')
-const expect = require('jest')
 
 
 describe('objectIsEmpty', () => {
@@ -31,30 +30,34 @@ describe('equalObjects', () => {
 
 describe('objectsSubset', () => {
     test('with commons', () => {
-        a = {a: 1, b: 2, f: '#'}
-        b = {a: 1, b: 2, c: 3}
-        expect(objectsSubset(a, b)).toBe({a: 1, b: 2})
+        let a = {a: 1, b: 2, f: '#'}
+        let b = {a: 1, b: 2, c: 3}
+        let expected = {a: 1, b: 2}
+        let result = objectsSubset(a, b)
+        expect(JSON.stringify(result)).toBe(JSON.stringify(expected))
     })
 
     test('without commons', () => {
-        a = {a: 1, b: 2, f: '#'}
-        b = {c: 3, d: 4}
-        expect(objectsSubset(a, b)).toBe({})
+        let a = {a: 1, b: 2, f: '#'}
+        let b = {c: 3, d: 4}
+        let expected = {}
+        let result = objectsSubset(a, b)
+        expect(JSON.stringify(result)).toBe(JSON.stringify(expected))
     })
 })
 
 describe('getByKey', () => {
     test('with existing key', () => {
-        obj = {a: 1, b: 2, c: 3}
+        let obj = {a: 1, b: 2, c: 3}
         expect(getByKey(obj, 'b')).toBe(2)
     })
 
     test('without existing key', () => {
-        obj = {a: 1, b: 2, c: 3}
+        let obj = {a: 1, b: 2, c: 3}
         try {
             getByKey(obj, 'd')
         } catch (e) {
             expect(e.message).toBe('No such key')
         }
     })
-}
+})
