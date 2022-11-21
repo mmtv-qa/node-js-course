@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mmtv-qa/node-js-course#readme",
   "dependencies": {
-    "jest": "^29.2.2"
+    "jest": "^29.2.2",
+    "readline-sync": "^1.4.10"
   }
 }
