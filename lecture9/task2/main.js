@@ -1,6 +1,5 @@
 const readline = require('readline-sync');
-const calculate = require('./calculate')
-
+const calculate = import('calculate.mjs');
 
 function main() {
     const input = readline.question('Enter expression: ');

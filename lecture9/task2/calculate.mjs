@@ -1,6 +1,6 @@
 
 
-function calculate(input) {
+export default function calculate(input) {
     let result = 0;
     let operator = '';
     let number = '';
@@ -29,6 +29,4 @@ function calculate(input) {
     }
     return result;
 }
-
-module.exports = calculate;
 
